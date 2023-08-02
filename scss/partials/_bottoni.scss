@@ -1,0 +1,16 @@
+%hero-btn {
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: $p-1 $p-2;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  animation: fadeIn 0.2s linear backwards;
+
+  &:hover {
+    background-color: aqua;
+    cursor: pointer;
+  }
+
+  @media (max-width: 766px) {
+    padding: $p-1 $p-1;
+  }
+}
