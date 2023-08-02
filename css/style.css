@@ -81,11 +81,6 @@ nav ul li a {
   width: 50%;
   justify-content: space-between;
 }
-@media (max-width: 576px) {
-  .hero .cont-buttons {
-    width: 80%;
-  }
-}
 .hero .cont-buttons button:nth-child(1) {
   background-color: #0e6cff;
 }
@@ -93,7 +88,12 @@ nav ul li a {
   background-color: #ff8700;
 }
 .hero .cont-buttons button:nth-child(3) {
-  background-color: #4caf50;
+  background-color: #ff8700;
+}
+@media (max-width: 576px) {
+  .hero .cont-buttons {
+    width: 80%;
+  }
 }
 .hero .hero-description {
   display: flex;

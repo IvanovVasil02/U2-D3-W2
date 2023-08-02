@@ -54,24 +54,36 @@ nav {
     flex-direction: row;
     width: 50%;
     justify-content: space-between;
+    // button:nth-child(1) {
+    //   background-color: $button-bg-primary;
+    //   @extend %hero-btn;
+    // }
+
+    // button:nth-child(2) {
+    //   background-color: $button-bg-secondary;
+    //   @extend %hero-btn;
+    // }
+
+    // button:nth-child(3) {
+    //   background-color: $button-bg-tertiary;
+    //   @extend %hero-btn;
+    // }
+
+    $buttons: (
+      1: $button-bg-primary,
+      2: $button-bg-secondary,
+      3: $button-bg-secondary,
+    );
+
+    @each $key, $value in $buttons {
+      button:nth-child(#{$key}) {
+        background-color: $value;
+        @extend %hero-btn;
+      }
+    }
 
     @media (max-width: 576px) {
       width: 80%;
-    }
-
-    button:nth-child(1) {
-      background-color: $button-bg-primary;
-      @extend %hero-btn;
-    }
-
-    button:nth-child(2) {
-      background-color: $button-bg-secondary;
-      @extend %hero-btn;
-    }
-
-    button:nth-child(3) {
-      background-color: $button-bg-tertiary;
-      @extend %hero-btn;
     }
   }
 
